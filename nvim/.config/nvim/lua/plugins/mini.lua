@@ -6,3 +6,4 @@ return {{
                 require('mini.bracketed').setup()
         end
 }}
+

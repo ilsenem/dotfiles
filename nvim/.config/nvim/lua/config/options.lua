@@ -16,9 +16,9 @@ opt.hlsearch = true
 opt.ignorecase = true
 opt.list = true
 opt.listchars = {
-  tab = "-->",
-  nbsp = "󱁐",
-  trail = "·",
+        tab = "-->",
+        nbsp = "󱁐",
+        trail = "·",
 }
 opt.number = true
 opt.relativenumber = true
