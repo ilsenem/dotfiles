@@ -1,0 +1,70 @@
+"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+final_space = true
+version = 2
+
+[[blocks]]
+  type = "prompt"
+  alignment = "left"
+
+  [[blocks.segments]]
+    type = "path"
+    style = "plain"
+    foreground = "blue"
+    background = "transparent"
+    template = "{{ .Path }}"
+
+    [blocks.segments.properties]
+      style = "full"
+
+  [[blocks.segments]]
+    type = "git"
+    style = "plain"
+    foreground = "darkGray"
+    background = "transparent"
+
+    [blocks.segments.properties]
+      fetch_status = true
+
+[[blocks]]
+  type = "rprompt"
+
+  [[blocks.segments]]
+    type = "executiontime"
+    style = "plain"
+    foreground_templates = [
+      "{{ if le .Ms 10000 }}yellow{{end}}",
+      "{{ if gt .Ms 10000 }}red{{end}}"
+    ]
+    background = "transparent"
+
+    [blocks.segments.properties]
+      treshhold = 500
+      style = "austin"
+
+[[blocks]]
+  type = "prompt"
+  alignment = "left"
+  newline = true
+
+  [[blocks.segments]]
+    type = "text"
+    style = "plain"
+    template = "❯"
+    foreground_templates = [
+      "{{if eq .Code 0}}cyan{{end}}",
+      "{{if gt .Code 0}}red{{end}}"
+    ]
+    background = "transparent"
+
+[transient_prompt]
+  foreground_templates = [
+    "{{if eq .Code 0}}cyan{{end}}",
+    "{{if gt .Code 0}}red{{end}}"
+  ]
+  background = "transparent"
+  template = "❯ "
+
+[secondary_prompt]
+  foreground = 'cyan'
+  background = 'transparent'
+  template = '❯❯ '
