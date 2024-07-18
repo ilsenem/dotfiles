@@ -61,3 +61,27 @@ Additional tools may be required such as:
 * NodeJS
 * ...
 
+## Management
+
+### Stow
+
+Stow is the package manager for configuration files. Install it:
+
+```bash
+brew install stow
+```
+
+Close this repo in the home dir:
+
+```bash
+cd ~/
+git clone git@github.com:ilsenem/dotfiles.git ~/.dotfiles
+```
+
+Go to the Dotfiles directory and isntall packages you need to configure:
+
+```bash
+cd ~/.dotfiles
+stow zsh
+```
+
