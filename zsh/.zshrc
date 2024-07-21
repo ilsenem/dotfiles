@@ -68,13 +68,13 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 ### Aliases
 
-alias ls='ls --color'
-alias ll='ls -la --color'
 alias c='clear'
 alias q='exit'
 alias vim='nvim'
 alias cat='bat'
-
+alias l='eza -la --group-directories-first --icons=always'
+alias lg='eza -la --git --no-permissions --no-user --no-time --icons=always --group-directories-first --git-ignore'
+alias lgt='eza -la --git --no-permissions --no-user --no-time --icons=always --group-directories-first --git-ignore --tree'
 ### Shell integration
 
 # Fuzzy search
